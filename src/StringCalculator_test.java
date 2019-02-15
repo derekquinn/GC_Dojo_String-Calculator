@@ -34,6 +34,7 @@ public class StringCalculator_test {
 		assertEquals(expected, actual);
 
 	}
+
 	@Test
 	void StringCalculatorTest3() {
 
@@ -47,6 +48,7 @@ public class StringCalculator_test {
 		assertEquals(expected, actual);
 
 	}
+
 	@Test
 	void StringCalculatorTest4() {
 
@@ -61,13 +63,30 @@ public class StringCalculator_test {
 
 	}
 
+	@Test
 	void StringCalculatorTest5() {
-		
 
+		// arrange
+		String expected = "101";
+
+		// actual
+		String actual = StringCalculator.add("1,100");
+
+		// assert
+		assertEquals(expected, actual);
 
 	}
-
+@Test
 	void StringCalculatorTest6() {
+
+		// arrange
+		String expected = "15.6";
+
+		// actual
+		String actual = StringCalculator.add("7.5,8.1");
+
+		// assert
+		assertEquals(expected, actual);
 
 	}
 

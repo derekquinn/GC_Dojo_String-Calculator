@@ -6,10 +6,30 @@ public class StringCalculator {
 		if (s == "") {
 			return "0";
 		}
-// do math separate by commas 
+
+// do double math separated by commas
+		if (s.contains(",") && s.contains(".")) {
+
+			String[] values = s.split(",");
+
+			String value3 = values[0];
+			String value4 = values[1];
+
+			double x = Double.parseDouble(value3);
+			double y = Double.parseDouble(value4);
+
+			double preResult = x + y;
+
+			String result = Double.toString(preResult);
+
+			return result;
+
+		}
+// do int math separated by commas 
 		if (s.contains(",")) {
 
 			String[] values = s.split(",");
+
 			String value1 = values[0];
 			String value2 = values[1];
 
@@ -23,9 +43,8 @@ public class StringCalculator {
 			return result;
 
 		}
+// do int math separated by commas with negative numbers 
 
 		return s;
-
 	}
-
 }
