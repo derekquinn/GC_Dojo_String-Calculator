@@ -76,7 +76,8 @@ public class StringCalculator_test {
 		assertEquals(expected, actual);
 
 	}
-@Test
+
+	@Test
 	void StringCalculatorTest6() {
 
 		// arrange
@@ -90,11 +91,26 @@ public class StringCalculator_test {
 
 	}
 
+	@Test
 	void StringCalculatorTest7() {
+		// arrange
+		String expected = "-65";
+
+		// actual
+		String actual = StringCalculator.add("-65");
+
+		// assert
+		assertEquals(expected, actual);
 
 	}
 
+	@Test
 	void StringCalculatorTest8() {
+		String expected = "-61";
+
+		String actual = StringCalculator.add("-65,4");
+
+		assertEquals(expected, actual);
 
 	}
 

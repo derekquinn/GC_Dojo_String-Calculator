@@ -2,12 +2,12 @@
 public class StringCalculator {
 
 	public static String add(String s) {
-// if input in blank return 0
+// 1 if input in blank return 0
 		if (s == "") {
 			return "0";
 		}
 
-// do double math separated by commas
+// 2 do double math separated by commas
 		if (s.contains(",") && s.contains(".")) {
 
 			String[] values = s.split(",");
@@ -25,7 +25,38 @@ public class StringCalculator {
 			return result;
 
 		}
-// do int math separated by commas 
+		
+// 3 do int math with one negative number and one positive number
+		
+		if (s.contains("-") && s.contains(",")) {
+			
+			String[] values = s.split(",");
+
+			String value89 = values[0];
+			String value90 = values[1];
+
+			int x = Integer.parseInt(value89);
+			int y = Integer.parseInt(value90);
+
+			int preResult = x + y;
+
+			String result = Integer.toString(preResult);
+
+			return result;
+			
+			
+		}
+
+// 4 do int math with one number separated by commas with negative numbers 		
+		if (s.contains("-")) {
+
+			String result = s;
+
+			return result;
+
+		}
+
+// 5 do int math separated by commas 
 		if (s.contains(",")) {
 
 			String[] values = s.split(",");
@@ -43,7 +74,6 @@ public class StringCalculator {
 			return result;
 
 		}
-// do int math separated by commas with negative numbers 
 
 		return s;
 	}
