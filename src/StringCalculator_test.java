@@ -114,19 +114,45 @@ public class StringCalculator_test {
 
 	}
 
+	@Test
 	void StringCalculatorTest9() {
+		String expected = "-89";
+
+		String actual = StringCalculator.add("-65,-24");
+
+		assertEquals(expected, actual);
 
 	}
 
+	@Test
 	void StringCalculatorTest10() {
+		String expected = "0";
+
+		String actual = StringCalculator.add("");
+
+		assertEquals(expected, actual);
 
 	}
 
+	@Test
 	void StringCalculatorTest11() {
 
+		String expected = "27";
+
+		String actual = StringCalculator.add("21,6");
+
+		assertEquals(expected, actual);
+
 	}
 
+	@Test
 	void StringCalculatorTest12() {
+
+		String expected = "43";
+
+		String actual = StringCalculator.add("41,2");
+
+		assertEquals(expected, actual);
 
 	}
 
